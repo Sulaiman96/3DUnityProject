@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e8f92a7c3ec451c83c2f040d86394e, type: 3}
+  m_Name: BOW
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  weaponType: 1
+  animatorOverideController: {fileID: 22100000, guid: 97721d4e3dabd453f82cc08b49a2a2a6,
+    type: 2}
