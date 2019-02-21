@@ -10,6 +10,10 @@ public class WeaponController : MonoBehaviour
     public Vector3 lookOffset;
     public Transform targetToLookAt;
 
+    public Transform weaponSpwanPoint;
+    public GameObject weaponToEquip;
+    WeaponActivator wp;
+
     Animator anim;
     
     // Start is called before the first frame update
@@ -23,6 +27,16 @@ public class WeaponController : MonoBehaviour
             anim.runtimeAnimatorController = weapon.animatorOverideController;
             anim.SetLayerWeight(1, 1);
             isWeaponEquipped = true;
+
+            weaponToEquip = Instantiate(weapon.prefab, weaponSpwanPoint) as GameObject; //instantiate the new weapon object
+            //weaponToEquip.transform.position = weaponSpwanPoint.position; //place it on weapon holder object which I put on my characters left hand.
+
+            wp = weaponToEquip.GetComponent<WeaponActivator>();
+            if(weapon.weaponType == WeaponSelection.WEAPONTYPE.BOW)
+            {
+                wp.projectile = weapon.projectile; //different bows will have different arrows (could be flames or freezing effect)
+                wp.projectileForce = weapon.projectileForce; //different bows will have different force (for damage purposes)
+            }
         }
     }
 
@@ -38,7 +52,12 @@ public class WeaponController : MonoBehaviour
             anim.SetBool("isAiming", Input.GetButton("Aim"));
 
             //attack if arrow is drawn and player clicks attack.
-            if (anim.GetCurrentAnimatorStateInfo(1).IsName("Aim") && Input.GetButtonDown("Attack")) ;
+            if (anim.GetCurrentAnimatorStateInfo(1).IsName("Aim") && Input.GetButtonDown("Attack"))
+            {
+                anim.SetTrigger("Attack");
+                wp.AttackBow();
+            }
+
         }
         #endregion
     }
@@ -54,6 +73,9 @@ public class WeaponController : MonoBehaviour
 
             //Set Player Chest Rotation
             chestBone.rotation = chestBone.rotation * Quaternion.Euler(lookOffset);
+
+            //Set Emitter Look Point
+            wp.emitPoint.LookAt(targetToLookAt);
         }
     }
 }
