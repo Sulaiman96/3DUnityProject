@@ -151,22 +151,22 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: skeletonZombie_diffuse
-    second: {fileID: 2800000, guid: 387b9dd7485ad4fb59bfd5d4ca6274d5, type: 3}
+    second: {fileID: 2800000, guid: 8189ff6313b27423bb92f5673c30fed7, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: skeletonZombie_glow
-    second: {fileID: 2800000, guid: 6ae62bf9c1faf464aad7bdcbb0847553, type: 3}
+    second: {fileID: 2800000, guid: 48ae9677f835c40c29e31dce7584cf87, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: skeletonZombie_normal
-    second: {fileID: 2800000, guid: c47b23720e66f4f459bb4c1d93d2b41b, type: 3}
+    second: {fileID: 2800000, guid: 7e9098c721c9c415896ad559b05d39d3, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: skeletonZombie_specular
-    second: {fileID: 2800000, guid: 04d9b3cfabcdb4bd892744c2812fc518, type: 3}
+    second: {fileID: 2800000, guid: 60bf96f287c0842b4a54113a328c9d6b, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

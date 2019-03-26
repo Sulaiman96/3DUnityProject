@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1395116565902896357}
   - component: {fileID: 8547496572395953407}
   - component: {fileID: 4944225952814860521}
+  - component: {fileID: 633914510501017562}
+  - component: {fileID: 1296728454105218896}
   m_Layer: 0
   m_Name: Erika_Archer_Arrow_Mesh
   m_TagString: Untagged
@@ -94,3 +96,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 48
   m_CollisionDetection: 0
+--- !u!64 &633914510501017562
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891872741513277257}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300002, guid: 2009e4ea737b7491e808e22ef5b81230, type: 3}
+--- !u!114 &1296728454105218896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891872741513277257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb1a0163afac46acaf2bbec8b2d9baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
