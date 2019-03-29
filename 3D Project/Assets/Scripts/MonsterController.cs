@@ -8,17 +8,21 @@ public class MonsterController : MonoBehaviour
     private Transform player;
 
     private NavMeshAgent nav;
+    private EnemyHealth enemyHealth;
 
-    private void Awake()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        nav.SetDestination(player.position);
+        if(enemyHealth.currentHealth != 0)
+        {
+            nav.SetDestination(player.position);
+        }
     }
 }

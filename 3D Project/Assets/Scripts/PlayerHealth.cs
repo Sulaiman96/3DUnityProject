@@ -14,16 +14,16 @@ public class PlayerHealth : MonoBehaviour
 
     Animator anim;
     AudioSource playerAudio;
-    PlayerController playerController;
+    SoldierController soldierController;
 
     bool isDead;
     bool damaged;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         anim = GetComponentInChildren<Animator>();
         playerAudio = GetComponent<AudioSource>();
-        playerController = GetComponent<PlayerController>();
+        soldierController = GetComponent<SoldierController>();
         currentHealth = startingHealth;
     }
 
@@ -39,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
             screenFlash.color = Color.Lerp(screenFlash.color, Color.clear, damageFlashSpeed * Time.deltaTime);
         }
         damaged = false;
+        healthSlider.value = currentHealth;
     }
 
     public void TakeDamage(int damageAmount)
@@ -56,11 +57,16 @@ public class PlayerHealth : MonoBehaviour
     private void Dead()
     {
         isDead = true;
-
         anim.SetTrigger("Die");
         playerAudio.clip = deathClip;
         playerAudio.Play();
 
-        playerController.enabled = false;
+        soldierController.enabled = false;
+    }
+
+    public void Healing(int amount)
+    {
+        int remainderHealth = amount - currentHealth;
+        currentHealth += remainderHealth;
     }
 }

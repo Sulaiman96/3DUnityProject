@@ -41,7 +41,7 @@ public class WeaponController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!isWeaponEquipped) return; //if weapon isn't equipped, return.
 

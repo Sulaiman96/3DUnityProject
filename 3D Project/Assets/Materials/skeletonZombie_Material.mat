@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: skeletonZombie_Material
-  m_Shader: {fileID: 14000, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 93c88cb6178cd624e9ccc17d1f409ec1, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _NORMALMAP
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -79,6 +79,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecularTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ThirdTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -102,6 +106,7 @@ Material:
     - _EmissionEnabled: 0
     - _EnableExternalAlpha: 0
     - _FlipbookMode: 0
+    - _Gloss: 0.5
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1

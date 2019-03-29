@@ -38,6 +38,8 @@ public class CameraController : MonoBehaviour
         currentPosition = transform.localPosition.normalized; //always facing on global axis
         zDistance = transform.localPosition.magnitude;
         maxDist = offset.z;
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void LateUpdate()

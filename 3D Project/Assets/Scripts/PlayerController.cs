@@ -131,6 +131,5 @@ public class PlayerController : MonoBehaviour
         isFalling = false;
         StopCoroutine(FallCheck());
     }
-
     #endregion
 }

@@ -15,7 +15,7 @@ public class MonsterAttack : MonoBehaviour
     float timer;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
@@ -39,10 +39,14 @@ public class MonsterAttack : MonoBehaviour
 
         if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
         {
+            anim.SetTrigger("Attack");
             Attack();
         }
-
-        if(playerHealth.currentHealth <= 0)
+        else
+        {
+            anim.SetTrigger("NotAttacking");
+        }
+        if (playerHealth.currentHealth <= 0)
         {
             anim.SetTrigger("PlayerDead");
         }

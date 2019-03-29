@@ -41,8 +41,7 @@ public class WaveSpawner : MonoBehaviour
             {
                 BeginNewRound();
                 //begin a new round!
-                //waveIndex++;
-                //SpawnWave();
+                SpawnWave(waves[waveIndex]);
             }
             else
             {
