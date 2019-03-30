@@ -8,11 +8,13 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth;
     public float deathSinkSpeed = 0.5f;
     public int moneyPerKill = 100;
+    public int totalKills;
+    public int totalMoneyEarned;
     public AudioClip deathClip;
+    public ParticleSystem hitParticles;
 
     private Animator anim;
     private AudioSource monsterAudio;
-    //private ParticleSystem hitParticles;
     private CapsuleCollider capsuleCollider;
     private bool isDead;
     private bool isSinking;
@@ -22,7 +24,6 @@ public class EnemyHealth : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         monsterAudio = GetComponent<AudioSource>();
-        //hitParticles = GetComponent<ParticleSystem>();
         capsuleCollider = GetComponent<CapsuleCollider>();
 
         currentHealth = startingHealth;
@@ -44,8 +45,8 @@ public class EnemyHealth : MonoBehaviour
         monsterAudio.Play();
         currentHealth -= amount;
 
-        //hitParticles.transform.position = hitPoint;
-        //hitParticles.Play();
+        hitParticles.transform.position = hitPoint;
+        hitParticles.Play();
         if(currentHealth <= 0)
         {
             Dead();
@@ -55,6 +56,7 @@ public class EnemyHealth : MonoBehaviour
     private void Dead()
     {
         isDead = true;
+        this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
         capsuleCollider.isTrigger = true;
         anim.SetTrigger("Dead");
         monsterAudio.clip = deathClip;

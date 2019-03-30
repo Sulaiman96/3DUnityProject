@@ -1752,9 +1752,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 1.4120593
   m_Direction: 1
-  m_Center: {x: 0, y: 0.46, z: 0}
+  m_Center: {x: 0, y: 0.6660297, z: 0}
 --- !u!54 &7280397788349439077
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1787,7 +1787,9 @@ MonoBehaviour:
   currentHealth: 0
   deathSinkSpeed: 0.5
   moneyPerKill: 200
-  deathClip: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 8c8b4012f639545b2a1f70a2082307b3, type: 3}
+  hitParticles: {fileID: 8420509287224798414, guid: d8b8856359f9e410689d74eacb661ef5,
+    type: 3}
 --- !u!114 &3681029075413030471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1800,7 +1802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff49ec451f3c4825a7dd63278bd4141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 2
   attackDamage: 25
 --- !u!114 &2501357926558768494
 MonoBehaviour:
@@ -1828,7 +1830,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1846,7 +1848,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8b76cff51a7d7e844b0adf5da4371ec6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: efec5f3a773b84f5fa2ae40719d54aea, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

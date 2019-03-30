@@ -12,7 +12,7 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Input.GetButton("Aim"))
+        if (Input.GetButton("Aim") || Input.GetButton("Fire1"))
         {
             chest.LookAt(targetToLookAt.position);
             chest.rotation = chest.rotation * Quaternion.Euler(offset);

@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class MonsterController : MonoBehaviour
 {   
     private Transform player;
-
     private NavMeshAgent nav;
     private EnemyHealth enemyHealth;
 

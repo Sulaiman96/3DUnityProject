@@ -5,6 +5,7 @@ using UnityEngine;
 public class HealthPickUp : MonoBehaviour
 {
     public int healthAmount = 100;
+    public int totalHealthPickupsAcquired;
     public AudioClip audio;
 
     private void OnTriggerEnter(Collider other)
@@ -17,10 +18,8 @@ public class HealthPickUp : MonoBehaviour
 
     void HealThePlayer(Collider player)
     {
-        Debug.Log("Picked up health");
-
+        totalHealthPickupsAcquired++;
         player.GetComponent<PlayerHealth>().Healing(healthAmount);
-
         AudioSource.PlayClipAtPoint(audio, this.gameObject.transform.position);
         Destroy(gameObject);
     }

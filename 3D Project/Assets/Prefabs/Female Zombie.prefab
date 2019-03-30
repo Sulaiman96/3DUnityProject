@@ -874,11 +874,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741bf9528e9e44089b04d75cfbb4a6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 20
+  startingHealth: 25
   currentHealth: 0
   deathSinkSpeed: 0.5
   moneyPerKill: 100
-  deathClip: {fileID: 8300000, guid: 48283adefda01514e851c40517a63d59, type: 3}
+  deathClip: {fileID: 8300000, guid: ad7b6eb3c723442b483e6b280fa02230, type: 3}
+  hitParticles: {fileID: 8420509287224798414, guid: d8b8856359f9e410689d74eacb661ef5,
+    type: 3}
 --- !u!114 &3936992121081083369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,7 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff49ec451f3c4825a7dd63278bd4141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.3
+  timeBetweenAttacks: 2
   attackDamage: 10
 --- !u!114 &7877556584519052253
 MonoBehaviour:
@@ -915,8 +917,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8581f806dddef8046b4942de05b897be, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: d65b81d6b848b467da29dab292d5ac66, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

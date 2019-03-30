@@ -7,9 +7,7 @@ public class GunController : MonoBehaviour
     public int damagePerBullet = 10;
     public float range = 100f;
     public float fireRate = 15f;
-    public float impactForce = 20f;
     public Camera fpsCam;
-    public Transform barrelEnd;
     public Transform chest;
     public Vector3 offset;
     public Transform targetToLookAt;
@@ -27,7 +25,7 @@ public class GunController : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time > nextTimeToFire)
         {
-            chest.LookAt(targetToLookAt.position);
+            chest.LookAt(fpsCam.transform.position);
             chest.rotation = chest.rotation * Quaternion.Euler(offset);
             nextTimeToFire = Time.time + (1 / fireRate);
             Shoot();

@@ -1643,8 +1643,8 @@ Rigidbody:
   m_GameObject: {fileID: 2654727415708664093}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: Infinity
-  m_AngularDrag: Infinity
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1687,9 +1687,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 931523c039e8648f2ae2785389e68571, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.902
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1783,8 +1783,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.35
-  m_Speed: 1
-  m_Acceleration: 4
+  m_Speed: 0.6
+  m_Acceleration: 3
   avoidancePriority: 50
   m_AngularSpeed: 80
   m_StoppingDistance: 1
@@ -1811,7 +1811,9 @@ MonoBehaviour:
   currentHealth: 0
   deathSinkSpeed: 0.5
   moneyPerKill: 300
-  deathClip: {fileID: 8300000, guid: e1d79f4a0c7873742babc5f6e9ff800e, type: 3}
+  deathClip: {fileID: 8300000, guid: ad7b6eb3c723442b483e6b280fa02230, type: 3}
+  hitParticles: {fileID: 8420509287224798414, guid: d8b8856359f9e410689d74eacb661ef5,
+    type: 3}
 --- !u!114 &1067085620765265253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1824,8 +1826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff49ec451f3c4825a7dd63278bd4141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 1
-  attackDamage: 40
+  timeBetweenAttacks: 4
+  attackDamage: 50
 --- !u!114 &948828911896592476
 MonoBehaviour:
   m_ObjectHideFlags: 0

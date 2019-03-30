@@ -10,19 +10,23 @@ public class SoldierController : MonoBehaviour
     public bool isSprinting;
     public float jumpHeight;
     public bool isFalling = false;
-
+    public Vector3 spawnPoint;
+    public GameObject primaryWeapon;
+   
     private float speed;
     private float dropRate = 3f;
     private float velocitySpeed = 120; //if the player is sprinting and jumps, he can jump further.
-
+    //private GunController primaryWeapon;
+    //private GunController secondaryWeapon = null;
     Rigidbody rb;
     Animator anim;
+    AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
-
+        audio = GetComponent<AudioSource>();
         speed = walkSpeed;
     }
 
@@ -38,11 +42,13 @@ public class SoldierController : MonoBehaviour
         {
             isSprinting = true;
             speed = runSpeed;
+            //audio.Play();
         }
         else if (speed != walkSpeed)
         {
             isSprinting = false;
             speed = walkSpeed;
+            //audio.Play();
         }
         #endregion
 
